@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="zh-Hant" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -9,25 +9,21 @@
       
       
       
-        <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E5%BE%81%E5%92%8C%E4%BD%9C%E7%94%A8/">
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>操作系统概念 - Juiey</title>
+        <title>程序的顺序执行和并发执行 - Juiey</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -87,8 +78,8 @@
   
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Juiey" class="md-header__button md-logo" aria-label="Juiey" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../../../.." title="Juiey" class="md-header__button md-logo" aria-label="Juiey" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              操作系统概念
+              程序的顺序执行和并发执行
             
           </span>
         </div>
@@ -148,26 +139,26 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="選擇語言">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C%E5%92%8C%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C/" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../zh-Hant/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" hreflang="zh-Hant" class="md-select__link">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
               繁體中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../en/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" hreflang="en" class="md-select__link">
+            <a href="../../../../en/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C%E5%92%8C%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -186,21 +177,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="搜尋">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -213,7 +204,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            正在初始化搜尋引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -227,7 +218,7 @@
   
     
       
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="標籤頁" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -243,29 +234,7 @@
   
     
   
-  马克思主义原理
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
-          
-  
-    
-  
-  操作系统
+  馬克思主義原理
 
         </a>
       </li>
@@ -299,9 +268,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="導航" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Juiey" class="md-nav__button md-logo" aria-label="Juiey" data-md-component="logo">
+    <a href="../../../.." title="Juiey" class="md-nav__button md-logo" aria-label="Juiey" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -376,7 +345,7 @@
             
   
   <span class="md-ellipsis">
-    马克思主义原理
+    馬克思主義原理
   </span>
   
 
@@ -386,7 +355,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            马克思主义原理
+            馬克思主義原理
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -401,7 +370,7 @@
         
   
   <span class="md-ellipsis">
-    物质与意识的辩证关系
+    物質與意識的辯證關係
   </span>
   
 
@@ -422,7 +391,7 @@
         
   
   <span class="md-ellipsis">
-    对立统一规律是事物发展的根本规律
+    對立統一規律是事物發展的根本規律
   </span>
   
 
@@ -443,7 +412,7 @@
         
   
   <span class="md-ellipsis">
-    量变质变规律和否定之否定规律
+    量質變規律和否定之否定規律
   </span>
   
 
@@ -464,7 +433,7 @@
         
   
   <span class="md-ellipsis">
-    唯物辩证法是科学的认识方法
+    唯物辯證法是科學的認識方法
   </span>
   
 
@@ -485,7 +454,7 @@
         
   
   <span class="md-ellipsis">
-    实践的本质与基本结构
+    實踐的本質與基本結構
   </span>
   
 
@@ -506,7 +475,7 @@
         
   
   <span class="md-ellipsis">
-    实践与认识的辩证运动及其规律
+    實踐與認識的辯證運動及其規律
   </span>
   
 
@@ -527,7 +496,7 @@
         
   
   <span class="md-ellipsis">
-    两次飞跃
+    兩次飛躍
   </span>
   
 
@@ -548,7 +517,7 @@
         
   
   <span class="md-ellipsis">
-    真理与价值的辩证统一
+    真理與價值的辯證統一
   </span>
   
 
@@ -569,7 +538,7 @@
         
   
   <span class="md-ellipsis">
-    社会存在和社会意识的辩证关系
+    社會存在與社會意識的辯證關係
   </span>
   
 
@@ -590,7 +559,7 @@
         
   
   <span class="md-ellipsis">
-    人民群众在创造历史过程中的决定作用
+    群众在創造歷史過程中的決定作用
   </span>
   
 
@@ -611,7 +580,7 @@
         
   
   <span class="md-ellipsis">
-    商品的二因素和生产商品的劳动的二重性
+    商品和生產商品的勞動的二重性
   </span>
   
 
@@ -632,7 +601,7 @@
         
   
   <span class="md-ellipsis">
-    价值规律及其作用
+    价值規律及其作用
   </span>
   
 
@@ -653,7 +622,7 @@
         
   
   <span class="md-ellipsis">
-    劳动力成为商品与货币转化为资本
+    劳动力成為商品與貨幣轉化為資本
   </span>
   
 
@@ -674,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    生产剩余价值是资本主义生产方式的绝对规律
+    生產剩余價值是資本主義生產方式的絕對規律
   </span>
   
 
@@ -695,7 +664,7 @@
         
   
   <span class="md-ellipsis">
-    资本主义基本矛盾
+    資本主義的基本矛盾
   </span>
   
 
@@ -716,7 +685,7 @@
         
   
   <span class="md-ellipsis">
-    资本主义经济危机
+    資本主義的經濟危機
   </span>
   
 
@@ -737,7 +706,7 @@
         
   
   <span class="md-ellipsis">
-    资本主义经济危机的周期性
+    資本主義經濟危機的周期性
   </span>
   
 
@@ -758,7 +727,7 @@
         
   
   <span class="md-ellipsis">
-    经济全球化及其影响
+    經濟全球化及其影響
   </span>
   
 
@@ -779,384 +748,11 @@
         
   
   <span class="md-ellipsis">
-    共产主义社会的基本特征总结
+    共産主義社會的基本特徵
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    操作系统
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            操作系统
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    操作系统引论
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            操作系统引论
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    操作系统概念
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    操作系统概念
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      计算机系统由硬件和软件组成。
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      软件分类
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的目的
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的定义(什么是操作系统)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的目标
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的功能
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E5%BE%81%E5%92%8C%E4%BD%9C%E7%94%A8/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    操作系统的特征和作用
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    进程管理
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            进程管理
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C%E5%92%8C%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    程序的顺序执行和并发执行
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    进程的概念
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    进程的状态
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1182,72 +778,10 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
   
   
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      计算机系统由硬件和软件组成。
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      软件分类
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的目的
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的定义(什么是操作系统)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的目标
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      操作系统的功能
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1262,49 +796,20 @@
                   
 
 
-  <h1>操作系统概念</h1>
+  <h1>程序的顺序执行和并发执行</h1>
 
-<h2 id="_1">计算机系统由硬件和软件组成。</h2>
-<p><strong>硬件</strong>是指计算机物理装置本身,是软件建立与活动的基础。</p>
-<p><strong>软件</strong>软件是计算机执行的程序，是对硬件进行管理和功能扩充。</p>
-<p><strong>操作系统</strong>属于<strong>系统</strong>软件，是管理计算机软硬件资源的重要程序，组织和控制整个系统的运行。操作系统通过提供各种系统程序（如编辑、连接程序）和系统维护程序（如查错、诊断程序）来辅助硬件和应用软件。</p>
-<h2 id="_2">软件分类</h2>
-<p>计算机软件分为三类：</p>
-<ul>
-<li><strong>系统软件</strong>：操作系统、编译程序、程序设计语言、连接装配程序以及与计算机密切相关的程序。</li>
-<li><strong>应用软件</strong>：如应用程序和特定功能软件包。</li>
-<li><strong>工具软件</strong>：如诊断和引导程序，用于系统的维护。</li>
-</ul>
-<blockquote>
-<p><strong>操作系统将系统中的各种软、硬件资源有机地组合成一个整体，使计算机真正体现了系统的完整性和可利用性。</strong></p>
-</blockquote>
-<h2 id="_3">操作系统的目的</h2>
-<ul>
-<li><strong>从管理角度</strong>：合理组织计算机工作流程，管理和分配资源，实现多用户共享。</li>
-<li><strong>从用户角度</strong>：提供友好界面，使用户无需了解硬件细节便能轻松使用计算机。</li>
-</ul>
-<h2 id="_4">操作系统的定义(什么是操作系统)</h2>
-<blockquote>
-<p><strong>操作系统是控制和管理计算机系统内部各种硬件和软件资源、有效地组织多道程序运行的系统软件（或程序集合），是用户与计算机之间的接口。</strong></p>
-</blockquote>
-<p><strong>主要目标包括</strong>：</p>
-<ul>
-<li>方便用户：提供友好的使用界面。</li>
-<li>扩展机器功能：增加硬件功能和新服务。</li>
-<li>管理系统资源：充分利用硬件和软件资源。</li>
-<li>提高系统效率：优化流程和性能。</li>
-<li>构建开放环境：支持扩展性和互操作性。</li>
-</ul>
-<h2 id="_5">操作系统的目标</h2>
-<p><strong>高效、方便、安全、鲁棒、移植</strong></p>
-<h2 id="_6">操作系统的功能</h2>
-<ul>
-<li>处理器管理</li>
-<li>存储管理</li>
-<li>设备管理</li>
-<li>文件管理</li>
-<li>作业管理</li>
-</ul>
+<p><strong>程序的顺序执行特点</strong>：</p>
+<ol>
+<li><strong>顺序性</strong>：程序严格按步骤执行，每个动作都在前一个动作完成后开始。</li>
+<li><strong>封闭性</strong>：程序的运行环境仅受自身的动作影响，不受外部因素的干扰。</li>
+<li><strong>可再现性</strong>：同样的初始条件下，程序每次执行结果相同，与执行速度无关。</li>
+</ol>
+<p><strong>程序的并发执行特点</strong>：</p>
+<ol>
+<li><strong>间断性</strong>：并发执行的程序可能因共享资源或任务协作而相互制约，形成“执行-暂停-执行”的间断性活动模式。</li>
+<li><strong>失去封闭性</strong>：并发程序共享系统资源，执行速度和控制转换受外部因素影响，导致运行环境不再封闭。</li>
+<li><strong>不可再现性</strong>：失去封闭性后，并发执行的程序在相同初始条件下可能得到不同的执行结果。</li>
+</ol>
 
 
 
@@ -1329,44 +834,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="上一页: &lt;a href=&#34;https://www.acfun.cn/v/ac46486585&#34; target=&#34;_blank&#34;&gt;点击看速成课&lt;/a&gt;">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                <a href="https://www.acfun.cn/v/ac46486585" target="_blank">点击看速成课</a>
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E5%BE%81%E5%92%8C%E4%BD%9C%E7%94%A8/" class="md-footer__link md-footer__link--next" aria-label="下一页: 操作系统的特征和作用">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                操作系统的特征和作用
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1410,10 +877,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   </body>
