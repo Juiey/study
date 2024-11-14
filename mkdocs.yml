@@ -1,7 +1,7 @@
 site_name: Juiey
 theme:
   name: material
-  language: zh  
+  language: zh
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -27,58 +27,66 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Juiey
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - 马克思主义原理:     
-    - 马克思主义原理/物质与意识的辩证关系.md
-    - 马克思主义原理/对立统一规律是事物发展的根本规律.md
-    - 马克思主义原理/量变质变规律和否定之否定规律.md
-    - 马克思主义原理/唯物辩证法是科学的认识方法.md
-    - 马克思主义原理/实践的本质与基本结构.md
-    - 马克思主义原理/实践与认识的辩证运动及其规律.md
-    - 马克思主义原理/两次飞跃.md
-    - 马克思主义原理/真理与价值的辩证统一.md
-    - 马克思主义原理/社会存在和社会意识的辩证关系.md
-    - 马克思主义原理/人民群众在创造历史过程中的决定作用.md
-    - 马克思主义原理/商品的二因素和生产商品的劳动的二重性.md
-    - 马克思主义原理/价值规律及其作用.md
-    - 马克思主义原理/劳动力成为商品与货币转化为资本.md
-    - 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.md
-    - 马克思主义原理/资本主义的基本矛盾.md
-    - 马克思主义原理/资本主义的经济危机.md
-    - 马克思主义原理/资本主义经济危机的周期性.md
-    - 马克思主义原理/经济全球化及其影响.md
-    - 马克思主义原理/共产主义社会的基本特征总结.md
+  - 马克思主义原理:
+      - 马克思主义原理/物质与意识的辩证关系.md
+      - 马克思主义原理/对立统一规律是事物发展的根本规律.md
+      - 马克思主义原理/量变质变规律和否定之否定规律.md
+      - 马克思主义原理/唯物辩证法是科学的认识方法.md
+      - 马克思主义原理/实践的本质与基本结构.md
+      - 马克思主义原理/实践与认识的辩证运动及其规律.md
+      - 马克思主义原理/两次飞跃.md
+      - 马克思主义原理/真理与价值的辩证统一.md
+      - 马克思主义原理/社会存在和社会意识的辩证关系.md
+      - 马克思主义原理/人民群众在创造历史过程中的决定作用.md
+      - 马克思主义原理/商品的二因素和生产商品的劳动的二重性.md
+      - 马克思主义原理/价值规律及其作用.md
+      - 马克思主义原理/劳动力成为商品与货币转化为资本.md
+      - 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.md
+      - 马克思主义原理/资本主义的基本矛盾.md
+      - 马克思主义原理/资本主义的经济危机.md
+      - 马克思主义原理/资本主义经济危机的周期性.md
+      - 马克思主义原理/经济全球化及其影响.md
+      - 马克思主义原理/共产主义社会的基本特征总结.md
   - 操作系统:
-    - 操作系统/index.md
-    - 操作系统引论:
-      - 操作系统/操作系统引论/操作系统概念.md
-      - 操作系统/操作系统引论/操作系统的特征和作用.md
-    - 进程管理:
-      - 操作系统/进程管理/程序的顺序执行和并发执行.md
-      - 操作系统/进程管理/进程的概念.md
-      - 操作系统/进程管理/进程的状态.md
-      - 操作系统/进程管理/进程的组成.md
-      - 操作系统/进程管理/线程的概念.md
-      - 操作系统/进程管理/线程的状态.md
-      - 操作系统/进程管理/进程的控制.md
-      - 操作系统/进程管理/进程的同步.md
-      - 操作系统/进程管理/进程的互斥.md
-      - 操作系统/进程管理/临界资源和临界区.md
-      - 操作系统/进程管理/信号量与PV操作.md
-      - 操作系统/进程管理/时间同步问题.md 
-    - 死锁:
-      - 操作系统/死锁/死锁的概念.md
-      - 操作系统/死锁/死锁的处理策略.md
+      - 操作系统/index.md
+      - 操作系统引论:
+          - 操作系统/操作系统引论/操作系统概念.md
+          - 操作系统/操作系统引论/操作系统的特征和作用.md
+      - 进程管理:
+          - 操作系统/进程管理/程序的顺序执行和并发执行.md
+          - 操作系统/进程管理/进程的概念.md
+          - 操作系统/进程管理/进程的状态.md
+          - 操作系统/进程管理/进程的组成.md
+          - 操作系统/进程管理/线程的概念.md
+          - 操作系统/进程管理/线程的状态.md
+          - 操作系统/进程管理/进程的控制.md
+          - 操作系统/进程管理/进程的同步.md
+          - 操作系统/进程管理/进程的互斥.md
+          - 操作系统/进程管理/临界资源和临界区.md
+          - 操作系统/进程管理/信号量与PV操作.md
+          - 操作系统/进程管理/时间同步问题.md
+      - 死锁:
+          - 操作系统/死锁/死锁的概念.md
+          - 操作系统/死锁/死锁的处理策略.md
+          - 操作系统/死锁/死锁的预防.md
+          - 操作系统/死锁/死锁的避免.md
+          - 操作系统/死锁/死锁的检测.md
+          - 操作系统/死锁/死锁的解除.md
+          - 操作系统/死锁/死锁的综合处理策略.md
+          - 操作系统/死锁/线程死锁.md
+      - 中断与处理机调度:
+          - 操作系统/中断与处理机调度/中断概述.md
+          - 操作系统/中断与处理机调度/三级调度体系.md
+          - 操作系统/中断与处理机调度/进程调度目标和调度方式.md
 
-
-
-
-  
 plugins:
   - search
   - i18n:
@@ -96,53 +104,49 @@ plugins:
           build: true
           nav:
             - 馬克思主義原理:
-              - 物質與意識的辯證關係: 马克思主义原理/物质与意识的辩证关系.zh-Hant.md
-              - 對立統一規律是事物發展的根本規律: 马克思主义原理/对立统一规律是事物发展的根本规律.zh-Hant.md
-              - 量質變規律和否定之否定規律: 马克思主义原理/量变质变规律和否定之否定规律.zh-Hant.md
-              - 唯物辯證法是科學的認識方法: 马克思主义原理/唯物辩证法是科学的认识方法.zh-Hant.md
-              - 實踐的本質與基本結構: 马克思主义原理/实践的本质与基本结构.zh-Hant.md
-              - 實踐與認識的辯證運動及其規律: 马克思主义原理/实践与认识的辩证运动及其规律.zh-Hant.md
-              - 兩次飛躍: 马克思主义原理/两次飞跃.zh-Hant.md
-              - 真理與價值的辯證統一: 马克思主义原理/真理与价值的辩证统一.zh-Hant.md
-              - 社會存在與社會意識的辯證關係: 马克思主义原理/社会存在和社会意识的辩证关系.zh-Hant.md
-              - 群众在創造歷史過程中的決定作用: 马克思主义原理/人民群众在创造历史过程中的决定作用.zh-Hant.md
-              - 商品和生產商品的勞動的二重性: 马克思主义原理/商品的二因素和生产商品的劳动的二重性.zh-Hant.md
-              - 价值規律及其作用: 马克思主义原理/价值规律及其作用.zh-Hant.md
-              - 劳动力成為商品與貨幣轉化為資本: 马克思主义原理/劳动力成为商品与货币转化为资本.zh-Hant.md
-              - 生產剩余價值是資本主義生產方式的絕對規律: 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.zh-Hant.md
-              - 資本主義的基本矛盾: 马克思主义原理/资本主义的基本矛盾.zh-Hant.md
-              - 資本主義的經濟危機: 马克思主义原理/资本主义的经济危机.zh-Hant.md        
-              - 資本主義經濟危機的周期性: 马克思主义原理/资本主义经济危机的周期性.zh-Hant.md
-              - 經濟全球化及其影響: 马克思主义原理/经济全球化及其影响.zh-Hant.md
-              - 共産主義社會的基本特徵: 马克思主义原理/共产主义社会的基本特征总结.zh-Hant.md
-            
+                - 物質與意識的辯證關係: 马克思主义原理/物质与意识的辩证关系.zh-Hant.md
+                - 對立統一規律是事物發展的根本規律: 马克思主义原理/对立统一规律是事物发展的根本规律.zh-Hant.md
+                - 量質變規律和否定之否定規律: 马克思主义原理/量变质变规律和否定之否定规律.zh-Hant.md
+                - 唯物辯證法是科學的認識方法: 马克思主义原理/唯物辩证法是科学的认识方法.zh-Hant.md
+                - 實踐的本質與基本結構: 马克思主义原理/实践的本质与基本结构.zh-Hant.md
+                - 實踐與認識的辯證運動及其規律: 马克思主义原理/实践与认识的辩证运动及其规律.zh-Hant.md
+                - 兩次飛躍: 马克思主义原理/两次飞跃.zh-Hant.md
+                - 真理與價值的辯證統一: 马克思主义原理/真理与价值的辩证统一.zh-Hant.md
+                - 社會存在與社會意識的辯證關係: 马克思主义原理/社会存在和社会意识的辩证关系.zh-Hant.md
+                - 群众在創造歷史過程中的決定作用: 马克思主义原理/人民群众在创造历史过程中的决定作用.zh-Hant.md
+                - 商品和生產商品的勞動的二重性: 马克思主义原理/商品的二因素和生产商品的劳动的二重性.zh-Hant.md
+                - 价值規律及其作用: 马克思主义原理/价值规律及其作用.zh-Hant.md
+                - 劳动力成為商品與貨幣轉化為資本: 马克思主义原理/劳动力成为商品与货币转化为资本.zh-Hant.md
+                - 生產剩余價值是資本主義生產方式的絕對規律: 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.zh-Hant.md
+                - 資本主義的基本矛盾: 马克思主义原理/资本主义的基本矛盾.zh-Hant.md
+                - 資本主義的經濟危機: 马克思主义原理/资本主义的经济危机.zh-Hant.md
+                - 資本主義經濟危機的周期性: 马克思主义原理/资本主义经济危机的周期性.zh-Hant.md
+                - 經濟全球化及其影響: 马克思主义原理/经济全球化及其影响.zh-Hant.md
+                - 共産主義社會的基本特徵: 马克思主义原理/共产主义社会的基本特征总结.zh-Hant.md
+
         - locale: en
           name: English
           build: true
           nav:
             - Principles of Marxism:
-              - The Dialectical Relationship Between Matter and Consciousness: 马克思主义原理/物质与意识的辩证关系.en.md
-              - The Law of the Unity of Opposites as the Fundamental Law of the Development of Things: 马克思主义原理/对立统一规律是事物发展的根本规律.en.md            
-              - The Laws of the Transformation of Quantity into Quality and the Negation of the Negation: 马克思主义原理/量变质变规律和否定之否定规律.en.md
-              - Material Dialectics is a Dcientific Ethod of Cognition: 马克思主义原理/唯物辩证法是科学的认识方法.en.md
-              - The Essence and Basic Structure of Practice: 马克思主义原理/实践的本质与基本结构.en.md
-              - The Dialectical Movement and Laws of Practice and Knowledge: 马克思主义原理/实践与认识的辩证运动及其规律.en.md
-              - The Two Leaps: 马克思主义原理/两次飞跃.en.md
-              - The Dialectical Unity of Truth and Value: 马克思主义原理/真理与价值的辩证统一.en.md
-              - The Dialectical Relationship Between Social Being and Social Consciousness: 马克思主义原理/社会存在和社会意识的辩证关系.en.md
-              - The Decisive Role of the People in the Process of Creating History: 马克思主义原理/人民群众在创造历史过程中的决定作用.en.md
-              - The Two Factors of Commodities and the Dual Character of Labor Producing Commodities: 马克思主义原理/商品的二因素和生产商品的劳动的二重性.en.md
-              - The Law of Value and Its Function: 马克思主义原理/价值规律及其作用.en.md
-              - Labor Power as a Commodity and the Transformation of Money into Capital: 马克思主义原理/劳动力成为商品与货币转化为资本.en.md
-              - The Production of Surplus Value as the Absolute Law of the Capitalist Mode of Production: 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.en.md
-              - The Basic Contradictions of Capitalism: 马克思主义原理/资本主义的基本矛盾.en.md
-              - The Economic Crisis of Capitalism: 马克思主义原理/资本主义的经济危机.en.md
-              - The Cyclical Nature of Capitalist Economic Crises: 马克思主义原理/资本主义经济危机的周期性.en.md
-              - Economic Globalization and Its Impact: 马克思主义原理/经济全球化及其影响.en.md
-              - Summary of the Basic Characteristics of a Communist Society: 马克思主义原理/共产主义社会的基本特征总结.en.md
-            
+                - The Dialectical Relationship Between Matter and Consciousness: 马克思主义原理/物质与意识的辩证关系.en.md
+                - The Law of the Unity of Opposites as the Fundamental Law of the Development of Things: 马克思主义原理/对立统一规律是事物发展的根本规律.en.md
+                - The Laws of the Transformation of Quantity into Quality and the Negation of the Negation: 马克思主义原理/量变质变规律和否定之否定规律.en.md
+                - Material Dialectics is a Dcientific Ethod of Cognition: 马克思主义原理/唯物辩证法是科学的认识方法.en.md
+                - The Essence and Basic Structure of Practice: 马克思主义原理/实践的本质与基本结构.en.md
+                - The Dialectical Movement and Laws of Practice and Knowledge: 马克思主义原理/实践与认识的辩证运动及其规律.en.md
+                - The Two Leaps: 马克思主义原理/两次飞跃.en.md
+                - The Dialectical Unity of Truth and Value: 马克思主义原理/真理与价值的辩证统一.en.md
+                - The Dialectical Relationship Between Social Being and Social Consciousness: 马克思主义原理/社会存在和社会意识的辩证关系.en.md
+                - The Decisive Role of the People in the Process of Creating History: 马克思主义原理/人民群众在创造历史过程中的决定作用.en.md
+                - The Two Factors of Commodities and the Dual Character of Labor Producing Commodities: 马克思主义原理/商品的二因素和生产商品的劳动的二重性.en.md
+                - The Law of Value and Its Function: 马克思主义原理/价值规律及其作用.en.md
+                - Labor Power as a Commodity and the Transformation of Money into Capital: 马克思主义原理/劳动力成为商品与货币转化为资本.en.md
+                - The Production of Surplus Value as the Absolute Law of the Capitalist Mode of Production: 马克思主义原理/生产剩余价值是资本主义生产方式的绝对规律.en.md
+                - The Basic Contradictions of Capitalism: 马克思主义原理/资本主义的基本矛盾.en.md
+                - The Economic Crisis of Capitalism: 马克思主义原理/资本主义的经济危机.en.md
+                - The Cyclical Nature of Capitalist Economic Crises: 马克思主义原理/资本主义经济危机的周期性.en.md
+                - Economic Globalization and Its Impact: 马克思主义原理/经济全球化及其影响.en.md
+                - Summary of the Basic Characteristics of a Communist Society: 马克思主义原理/共产主义社会的基本特征总结.en.md
 
-
-
-       
 copyright: Copyright &copy; 2024 Juiey
