@@ -797,15 +797,6 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      线程死锁
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
       解决方案
     </span>
   </a>
@@ -813,7 +804,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       总结
     </span>
@@ -838,7 +829,6 @@
 
   <h1>线程死锁</h1>
 
-<h3 id="_1">线程死锁</h3>
 <p>在支持多线程的操作系统中，线程死锁是指多个线程因相互等待资源而导致的死锁状态。线程死锁可以分为两种类型：</p>
 <ol>
 <li><strong>同一进程的线程死锁</strong></li>
@@ -872,7 +862,7 @@
 <p><strong>死锁原因</strong>：进程间的线程相互持有对方需要的资源，并且在等待中形成循环等待。</p>
 </li>
 </ol>
-<h3 id="_2">解决方案</h3>
+<h2 id="_1">解决方案</h2>
 <p>线程死锁的解决方法基本与进程死锁的解决方法类似，可以通过以下方式处理：</p>
 <ol>
 <li><strong>死锁预防</strong>：通过限制资源的申请顺序或设计资源分配规则，防止死锁的发生。</li>
@@ -888,7 +878,7 @@
 <li><strong>终止进程</strong>：结束某个死锁进程，释放资源。</li>
 <li><strong>回滚进程</strong>：回退某个进程到之前的安全状态，释放资源。</li>
 </ol>
-<h3 id="_3">总结</h3>
+<h2 id="_2">总结</h2>
 <ul>
 <li><strong>同一进程的线程死锁</strong>：线程因互斥锁的申请顺序错误或竞争导致死锁。</li>
 <li><strong>不同进程的线程死锁</strong>：不同进程中的线程因相互等待资源而发生死锁。</li>
