@@ -23,9 +23,10 @@ theme:
     - search.share
     - navigation.footer
     - navigation.top
-
-  icon:
-    repo: fontawesome/brands/github
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Juiey/study
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -84,8 +85,18 @@ nav:
           - 操作系统/死锁/线程死锁.md
       - 中断与处理机调度:
           - 操作系统/中断与处理机调度/中断概述.md
-          - 操作系统/中断与处理机调度/三级调度体系.md
           - 操作系统/中断与处理机调度/进程调度目标和调度方式.md
+          - 操作系统/中断与处理机调度/调度算法的评价准则.md 
+          - 操作系统/中断与处理机调度/三级调度体系.md
+          - 操作系统/中断与处理机调度/作业调度.md
+          - 操作系统/中断与处理机调度/进程调度.md
+          - 操作系统/中断与处理机调度/线程调度.md
+      - 存储管理:
+          - 操作系统/存储管理/存储管理概述.md
+          - 操作系统/存储管理/程序的装入.md
+          - 操作系统/存储管理/程序的链接.md
+          - 操作系统/存储管理/连续存储管理.md
+
 
 plugins:
   - search
