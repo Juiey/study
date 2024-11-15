@@ -23,12 +23,20 @@ theme:
     - search.share
     - navigation.footer
     - navigation.top
+  icon:
+    annotation: material/chevron-right-circle
 extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/Juiey/study
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
@@ -96,6 +104,14 @@ nav:
           - 操作系统/存储管理/程序的装入.md
           - 操作系统/存储管理/程序的链接.md
           - 操作系统/存储管理/连续存储管理.md
+          - 操作系统/存储管理/页式存储管理.md
+          - 操作系统/存储管理/段式存储管理.md
+          - 操作系统/存储管理/分页和分段存储管理的主要区别.md
+          - 操作系统/存储管理/段页式存储管理.md
+          - 操作系统/存储管理/虚拟存储管理方式.md
+          - 操作系统/存储管理/页面置换算法.md
+      - 设备管理:
+          - 操作系统/设备管理/设备管理概述.md
 
 
 plugins:
@@ -104,6 +120,7 @@ plugins:
       docs_structure: suffix
       reconfigure_search: true
       fallback_to_default: true
+      reconfigure_material: true
       languages:
         - locale: zh
           default: true
