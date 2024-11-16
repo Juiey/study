@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳轉至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -789,6 +794,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件与文件系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件的分类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件系统的功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件系统的层次结构
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -804,7 +853,101 @@
 
   <h1>文件管理概述</h1>
 
-
+<p>文件管理是现代操作系统中一个重要的功能模块，主要负责对用户信息进行管理，包括存储、检索、更新、共享和保护。</p>
+<h2 id="_1">文件与文件系统</h2>
+<ul>
+<li>
+<p><strong>文件</strong>是操作系统中存储信息的基本单位。文件具有以下主要属性：</p>
+<ul>
+<li><strong>基本属性</strong>：文件名、文件大小、创建时间等。</li>
+<li><strong>类型属性</strong>：文件类型，如文本文件、二进制文件等。</li>
+<li><strong>保护属性</strong>：权限设置，如只读、可读写、可执行等。</li>
+<li><strong>管理属性</strong>：文件路径、所有者、所属组等信息。</li>
+<li><strong>控制属性</strong>：访问控制列表（ACL）、锁定状态等。</li>
+</ul>
+</li>
+<li>
+<p><strong>文件系统</strong>是操作系统中负责存取和管理文件信息的软件系统。其主要功能包括：</p>
+<ul>
+<li><strong>系统功能</strong>:管理文件的存储、检索、更新。提供安全可靠的共享和保护机制。为用户提供方便的操作接口。</li>
+<li><strong>系统角度</strong>：文件系统的功能是管理文件的存储，并对文件进行检索、保护、组织和分配存储空间。</li>
+<li><strong>用户角度</strong>：文件系统的功能是实现“按名存取”，即用户通过文件名即可访问文件。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">文件的分类</h2>
+<ul>
+<li>
+<p><strong>按性质和用途分类</strong>：</p>
+<ul>
+<li><strong>系统文件</strong>：操作系统核心文件和配置文件。</li>
+<li><strong>库文件</strong>：共享的程序库或动态链接库（DLL）。</li>
+<li><strong>用户文件</strong>：用户创建的文件，如文档、图片等。</li>
+</ul>
+</li>
+<li>
+<p><strong>按保护级别分类</strong>：</p>
+<ul>
+<li><strong>只读文件</strong>：仅允许读取，不允许修改。</li>
+<li><strong>读写文件</strong>：允许读取和修改。</li>
+<li><strong>执行文件</strong>：可执行的程序文件。</li>
+<li><strong>不保护文件</strong>：没有设置权限保护的文件。</li>
+</ul>
+</li>
+<li>
+<p><strong>按信息流向分类</strong>：</p>
+<ul>
+<li><strong>输入文件</strong>：从外部设备或系统获取输入数据的文件。</li>
+<li><strong>输出文件</strong>：向外部设备或系统输出数据的文件。</li>
+<li><strong>输入输出文件</strong>：同时用于输入和输出的文件。</li>
+</ul>
+</li>
+<li>
+<p><strong>按存放时限分类</strong>：</p>
+<ul>
+<li><strong>临时文件</strong>：用于临时存储数据，生命周期较短。</li>
+<li><strong>永久文件</strong>：长期保存的文件。</li>
+<li><strong>档案文件</strong>：用于归档保存的重要文件。</li>
+</ul>
+</li>
+<li>
+<p><strong>按数据形式分类</strong>：</p>
+<ul>
+<li><strong>普通文件</strong>：包含文本、二进制数据等。</li>
+<li><strong>目录文件</strong>：用于存储文件和目录的组织信息。</li>
+<li><strong>特殊文件</strong>：表示设备、管道等的文件。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">文件系统的功能</h2>
+<ul>
+<li>
+<p><strong>目录管理</strong>：通过目录结构组织文件，实现按名存取。</p>
+</li>
+<li>
+<p><strong>文件的组织</strong>：</p>
+<ul>
+<li><strong>逻辑结构</strong>：用户视角的文件结构，如平面文件、树状文件。</li>
+<li><strong>物理结构</strong>：存储设备上的文件布局，如连续分配、链式分配。</li>
+</ul>
+</li>
+<li><strong>文件存储空间的管理</strong>：负责辅存空间（磁盘等）的分配和释放。</li>
+<li><strong>文件操作</strong>：包括创建、打开、读取、写入、关闭、删除文件等基本操作。</li>
+<li><strong>文件的共享、保护和保密</strong>：提供权限控制和加密机制，确保文件的安全性和隐私性。</li>
+</ul>
+<h2 id="_4">文件系统的层次结构</h2>
+<p>文件系统通常分为以下三个层次：</p>
+<ul>
+<li><strong>描述层</strong>：负责说明系统中所有文件和存储介质的使用状况。例如，文件系统的元数据、文件目录结构等。</li>
+<li><strong>管理层</strong>：文件系统的核心部分，主要包括：<ul>
+<li><strong>设备驱动管理</strong>：管理与存储设备相关的驱动程序。</li>
+<li><strong>物理 I/O 控制</strong>：处理底层的输入/输出操作。</li>
+<li><strong>文件存储组织</strong>：管理文件在物理存储介质上的组织形式。</li>
+<li><strong>逻辑 I/O 管理</strong>：提供文件的逻辑视图，屏蔽底层存储细节。</li>
+</ul>
+</li>
+<li><strong>接口层</strong>：为用户提供操作文件系统的接口，包括命令接口（如 CLI 命令）和程序接口（如 API 调用）。</li>
+</ul>
 
 
 
