@@ -3,7 +3,7 @@
 ## <a href="https://www.acfun.cn/v/ac46486585" target="_blank">点击看理论题速成课</a>
 ## <a href="https://www.bilibili.com/video/BV1qd4y177eA/?spm_id_from=333.999.0.0&vd_source=3d62b10ecb1870c000366b611daa717a" target="_blank">点击看大题速成课</a>
 
-### 第一章[操作系统引论](../操作系统/操作系统引论/操作系统概念.md)(以教材为准)
+### 第一章[操作系统引论](../操作系统/操作系统引论/操作系统概念.md)(以课件为准)
 
 ### 题型(2024/11/23):
 
