@@ -4,4 +4,4 @@
 
 [点击跳转操作系统](操作系统/index.md){ .md-button }
 
-[备用域名](https://juiey.github.io/study/)
+[备用域名](https://study-seven-roan.vercel.app/)
