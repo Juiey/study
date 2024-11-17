@@ -138,7 +138,11 @@ nav:
 
 
 plugins:
-  - search
+  - search:
+     lang:
+      - zh
+      - zh-Hant
+      - en
   - i18n:
       docs_structure: suffix
       reconfigure_search: true
