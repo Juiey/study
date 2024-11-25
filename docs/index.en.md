@@ -6,4 +6,4 @@
 
 [Click to jump to the operating system](操作系统/index.en.md){ .md-button }
 
-[Alternative domain name](https://study-seven-roan.vercel.app/)
+[Alternative domain name](https://juiey-study.vercel.app/)

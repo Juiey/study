@@ -5,4 +5,4 @@
 
 [點選跳轉操作系統](操作系统/index.zh-Hant.md){ .md-button }
 
-[備用網域名稱](https://study-seven-roan.vercel.app/)
+[備用網域名稱](https://juiey-study.vercel.app/)
