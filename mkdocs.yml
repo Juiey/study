@@ -27,7 +27,7 @@ theme:
     annotation: material/chevron-right-circle
 extra:
   social:
-    - icon: fontawesome/brands/github 
+    - icon: fontawesome/brands/github
       link: https://github.com/Juiey/study
 
 markdown_extensions:
@@ -96,7 +96,7 @@ nav:
       - 中断与处理机调度:
           - 操作系统/中断与处理机调度/中断概述.md
           - 操作系统/中断与处理机调度/进程调度目标和调度方式.md
-          - 操作系统/中断与处理机调度/调度算法的评价准则.md 
+          - 操作系统/中断与处理机调度/调度算法的评价准则.md
           - 操作系统/中断与处理机调度/三级调度体系.md
           - 操作系统/中断与处理机调度/作业调度.md
           - 操作系统/中断与处理机调度/进程调度.md
@@ -133,16 +133,12 @@ nav:
           - 操作系统/作业管理与用户接口/交互式作业的控制与管理.md
           - 操作系统/作业管理与用户接口/操作系统与用户的接口.md
 
-          
-          
-
-
 plugins:
   - search:
-     lang:
-      - zh
-      - zh-Hant
-      - en
+      lang:
+        - zh
+        - zh-Hant
+        - en
   - i18n:
       docs_structure: suffix
       reconfigure_search: true
@@ -178,6 +174,75 @@ plugins:
                 - 資本主義經濟危機的周期性: 马克思主义原理/资本主义经济危机的周期性.zh-Hant.md
                 - 經濟全球化及其影響: 马克思主义原理/经济全球化及其影响.zh-Hant.md
                 - 共産主義社會的基本特徵: 马克思主义原理/共产主义社会的基本特征总结.zh-Hant.md
+            - 操作系統:
+                - 操作系统/index.zh-Hant.md
+                - 課件: 操作系统/课件.zh-Hant.md
+                - 操作系統引論:
+                    - 操作系統的特徵和作用: 操作系统/操作系统引论/操作系统的特征和作用.zh-Hant.md
+                    - 操作系統的概念: 操作系统/操作系统引论/操作系统概念.zh-Hant.md
+                - 進程管理:
+                    - 程序的順序執行和並發執行: 操作系统/进程管理/程序的顺序执行和并发执行.zh-Hant.md
+                    - 進程的概念: 操作系统/进程管理/进程的概念.zh-Hant.md
+                    - 進程的狀態: 操作系统/进程管理/进程的状态.zh-Hant.md
+                    - 進程的狀態: 操作系统/进程管理/进程的状态.zh-Hant.md
+                    - 進程的組成: 操作系统/进程管理/进程的组成.zh-Hant.md
+                    - 線程的概念: 操作系统/进程管理/线程的概念.zh-Hant.md
+                    - 線程的狀態: 操作系统/进程管理/线程的状态.zh-Hant.md
+                    - 進程的控制: 操作系统/进程管理/进程的控制.zh-Hant.md
+                    - 進程的同步: 操作系统/进程管理/进程的同步.zh-Hant.md
+                    - 進程的互斥: 操作系统/进程管理/进程的互斥.zh-Hant.md
+                    - 臨界資源和臨界區: 操作系统/进程管理/临界资源和临界区.zh-Hant.md
+                    - 信號量與PV操作: 操作系统/进程管理/信号量与PV操作.zh-Hant.md
+                    - 時間同步問題: 操作系统/进程管理/时间同步问题.zh-Hant.md
+                - 死鎖:  
+                    - 死鎖的概念: 操作系统/死锁/死锁的概念.zh-Hant.md  
+                    - 死鎖的處理策略: 操作系统/死锁/死锁的处理策略.zh-Hant.md  
+                    - 死鎖的預防: 操作系统/死锁/死锁的预防.zh-Hant.md  
+                    - 死鎖的避免: 操作系统/死锁/死锁的避免.zh-Hant.md  
+                    - 死鎖的檢測: 操作系统/死锁/死锁的检测.zh-Hant.md  
+                    - 死鎖的解除: 操作系统/死锁/死锁的解除.zh-Hant.md  
+                    - 死鎖的綜合處理策略: 操作系统/死锁/死锁的综合处理策略.zh-Hant.md  
+                    - 線程死鎖: 操作系统/死锁/线程死锁.zh-Hant.md  
+                - 中斷與處理機調度:  
+                    - 中斷概述: 操作系统/中断与处理机调度/中断概述.zh-Hant.md  
+                    - 進程調度目標和調度方式: 操作系统/中断与处理机调度/进程调度目标和调度方式.zh-Hant.md  
+                    - 調度算法的評價準則: 操作系统/中断与处理机调度/调度算法的评价准则.zh-Hant.md  
+                    - 三級調度體系: 操作系统/中断与处理机调度/三级调度体系.zh-Hant.md  
+                    - 作業調度: 操作系统/中断与处理机调度/作业调度.zh-Hant.md  
+                    - 進程調度: 操作系统/中断与处理机调度/进程调度.zh-Hant.md  
+                    - 線程調度: 操作系统/中断与处理机调度/线程调度.zh-Hant.md  
+                - 存儲管理:  
+                    - 存儲管理概述: 操作系统/存储管理/存储管理概述.zh-Hant.md  
+                    - 程序的裝入: 操作系统/存储管理/程序的装入.zh-Hant.md  
+                    - 程序的鏈接: 操作系统/存储管理/程序的链接.zh-Hant.md  
+                    - 連續存儲管理: 操作系统/存储管理/连续存储管理.zh-Hant.md  
+                    - 頁式存儲管理: 操作系统/存储管理/页式存储管理.zh-Hant.md  
+                    - 段式存儲管理: 操作系统/存储管理/段式存储管理.zh-Hant.md  
+                    - 分頁和分段存儲管理的主要區別: 操作系统/存储管理/分页和分段存储管理的主要区别.zh-Hant.md  
+                    - 段頁式存儲管理: 操作系统/存储管理/段页式存储管理.zh-Hant.md  
+                    - 虛擬存儲管理方式: 操作系统/存储管理/虚拟存储管理方式.zh-Hant.md  
+                    - 頁面置換算法: 操作系统/存储管理/页面置换算法.zh-Hant.md  
+                - 設備管理:  
+                    - 設備管理概述: 操作系统/设备管理/设备管理概述.zh-Hant.md  
+                    - 輸入輸出系統: 操作系统/设备管理/输入输出系统.zh-Hant.md  
+                    - 輸入輸出的控制方式: 操作系统/设备管理/输入输出的控制方式.zh-Hant.md  
+                    - 緩衝技術: 操作系统/设备管理/缓冲技术.zh-Hant.md  
+                    - 設備分配技術: 操作系统/设备管理/设备分配技术.zh-Hant.md  
+                    - 磁盤管理: 操作系统/设备管理/磁盘管理.zh-Hant.md  
+                - 文件管理:  
+                    - 文件管理概述: 操作系统/文件管理/文件管理概述.zh-Hant.md  
+                    - 文件的組織結構和存取方式: 操作系统/文件管理/文件的组织结构和存取方式.zh-Hant.md  
+                    - 目錄管理: 操作系统/文件管理/目录管理.zh-Hant.md  
+                    - 文件的使用: 操作系统/文件管理/文件的使用.zh-Hant.md  
+                    - 文件的共享: 操作系统/文件管理/文件的共享.zh-Hant.md  
+                    - 文件的保護與保密: 操作系统/文件管理/文件的保护与保密.zh-Hant.md  
+                - 作業管理與用戶接口:  
+                    - 作業管理概述: 操作系统/作业管理与用户接口/作业管理概述.zh-Hant.md  
+                    - 批處理作業的管理: 操作系统/作业管理与用户接口/批处理作业的管理.zh-Hant.md  
+                    - 批處理作業調度算法: 操作系统/作业管理与用户接口/批处理作业调度算法.zh-Hant.md  
+                    - 交互式作業的控制與管理: 操作系统/作业管理与用户接口/交互式作业的控制与管理.zh-Hant.md  
+                    - 操作系統與用戶的接口: 操作系统/作业管理与用户接口/操作系统与用户的接口.zh-Hant.md  
+
 
         - locale: en
           name: English
@@ -203,5 +268,73 @@ plugins:
                 - The Cyclical Nature of Capitalist Economic Crises: 马克思主义原理/资本主义经济危机的周期性.en.md
                 - Economic Globalization and Its Impact: 马克思主义原理/经济全球化及其影响.en.md
                 - Summary of the Basic Characteristics of a Communist Society: 马克思主义原理/共产主义社会的基本特征总结.en.md
+            - Operating System:
+                - 操作系统/index.en.md
+                - Courseware: 操作系统/课件.en.md
+                - Operating System Introduction:
+                    - Characteristics and Functions of Operating Systems: 操作系统/操作系统引论/操作系统的特征和作用.en.md
+                    - Concepts of Operating Systems: 操作系统/操作系统引论/操作系统概念.en.md
+                - Process Management:
+                    - Sequential and Concurrent Program Execution: 操作系统/进程管理/程序的顺序执行和并发执行.en.md
+                    - Process Concepts: 操作系统/进程管理/进程的概念.en.md
+                    - Process States: 操作系统/进程管理/进程的状态.en.md
+                    - Process Composition: 操作系统/进程管理/进程的组成.en.md
+                    - Thread Concepts: 操作系统/进程管理/线程的概念.en.md
+                    - Thread States: 操作系统/进程管理/线程的状态.en.md
+                    - Process Control: 操作系统/进程管理/进程的控制.en.md
+                    - Process Synchronization: 操作系统/进程管理/进程的同步.en.md
+                    - Process Mutual Exclusion: 操作系统/进程管理/进程的互斥.en.md
+                    - Critical Resources and Critical Sections: 操作系统/进程管理/临界资源和临界区.en.md
+                    - Semaphores and PV Operations: 操作系统/进程管理/信号量与PV操作.en.md
+                    - Time Synchronization Problems: 操作系统/进程管理/时间同步问题.en.md
+                - Deadlock:
+                    - Deadlock Concepts: 操作系统/死锁/死锁的概念.en.md
+                    - Deadlock Handling Strategies: 操作系统/死锁/死锁的处理策略.en.md
+                    - Deadlock Prevention: 操作系统/死锁/死锁的预防.en.md
+                    - Deadlock Avoidance: 操作系统/死锁/死锁的避免.en.md
+                    - Deadlock Detection: 操作系统/死锁/死锁的检测.en.md
+                    - Deadlock Recovery: 操作系统/死锁/死锁的解除.en.md
+                    - Comprehensive Deadlock Handling Strategies: 操作系统/死锁/死锁的综合处理策略.en.md
+                    - Thread Deadlock: 操作系统/死锁/线程死锁.en.md
+                - Interrupts and Processor Scheduling:
+                    - Interrupt Overview: 操作系统/中断与处理机调度/中断概述.en.md
+                    - Process Scheduling Goals and Methods: 操作系统/中断与处理机调度/进程调度目标和调度方式.en.md
+                    - Scheduling Algorithm Evaluation Criteria: 操作系统/中断与处理机调度/调度算法的评价准则.en.md
+                    - Three-Level Scheduling System: 操作系统/中断与处理机调度/三级调度体系.en.md
+                    - Job Scheduling: 操作系统/中断与处理机调度/作业调度.en.md
+                    - Process Scheduling: 操作系统/中断与处理机调度/进程调度.en.md
+                    - Thread Scheduling: 操作系统/中断与处理机调度/线程调度.en.md
+                - Memory Management:
+                    - Memory Management Overview: 操作系统/存储管理/存储管理概述.en.md
+                    - Program Loading: 操作系统/存储管理/程序的装入.en.md
+                    - Program Linking: 操作系统/存储管理/程序的链接.en.md
+                    - Contiguous Memory Management: 操作系统/存储管理/连续存储管理.en.md
+                    - Paged Memory Management: 操作系统/存储管理/页式存储管理.en.md
+                    - Segmented Memory Management: 操作系统/存储管理/段式存储管理.en.md
+                    - Main Differences Between Paging and Segmentation: 操作系统/存储管理/分页和分段存储管理的主要区别.en.md
+                    - Segmented Paging Memory Management: 操作系统/存储管理/段页式存储管理.en.md
+                    - Virtual Memory Management Methods: 操作系统/存储管理/虚拟存储管理方式.en.md
+                    - Page Replacement Algorithms: 操作系统/存储管理/页面置换算法.en.md
+                - Device Management:
+                    - Device Management Overview: 操作系统/设备管理/设备管理概述.en.md
+                    - Input/Output System: 操作系统/设备管理/输入输出系统.en.md
+                    - Input/Output Control Methods: 操作系统/设备管理/输入输出的控制方式.en.md
+                    - Buffering Techniques: 操作系统/设备管理/缓冲技术.en.md
+                    - Device Allocation Techniques: 操作系统/设备管理/设备分配技术.en.md
+                    - Disk Management: 操作系统/设备管理/磁盘管理.en.md
+                - File Management:
+                    - File Management Overview: 操作系统/文件管理/文件管理概述.en.md
+                    - File Organization Structure and Access Methods: 操作系统/文件管理/文件的组织结构和存取方式.en.md
+                    - Directory Management: 操作系统/文件管理/目录管理.en.md
+                    - File Usage: 操作系统/文件管理/文件的使用.en.md
+                    - File Sharing: 操作系统/文件管理/文件的共享.en.md
+                    - File Protection and Security: 操作系统/文件管理/文件的保护与保密.en.md
+                - Job Management and User Interface:
+                    - Job Management Overview: 操作系统/作业管理与用户接口/作业管理概述.en.md
+                    - Batch Job Management: 操作系统/作业管理与用户接口/批处理作业的管理.en.md
+                    - Batch Job Scheduling Algorithms: 操作系统/作业管理与用户接口/批处理作业调度算法.en.md
+                    - Interactive Job Control and Management: 操作系统/作业管理与用户接口/交互式作业的控制与管理.en.md
+                    - Operating System and User Interface: 操作系统/作业管理与用户接口/操作系统与用户的接口.en.md
+            
 
 copyright: Copyright &copy; 2024 Juiey
