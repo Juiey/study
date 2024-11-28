@@ -10,12 +10,12 @@ Semaphores can only be accessed through **PV operations** (P operations and V op
 Semaphores are divided into two types according to their uses:
 
 1. **Public semaphores**:
-- All related processes can perform P operations and V operations on them.
-- The initial value of a public semaphore is usually 1, which is used to implement mutual exclusive access of processes (for example, to ensure exclusive access to shared resources).
+      - All related processes can perform P operations and V operations on them.
+      - The initial value of a public semaphore is usually 1, which is used to implement mutual exclusive access of processes (for example, to ensure exclusive access to shared resources).
 
 2. **Private semaphores**:
-- Only the process that owns the semaphore can perform P operations, and other processes can only perform V operations.
-- The initial value of a private semaphore is often 0 or a positive integer, which is used to implement process synchronization and ensure the order of certain operations.
+      - Only the process that owns the semaphore can perform P operations, and other processes can only perform V operations.
+      - The initial value of a private semaphore is often 0 or a positive integer, which is used to implement process synchronization and ensure the order of certain operations.
 
 ## P operation and V operation
 The P operation and V operation you described correspond to the "wait" (P) and "release" (V) operations of the semaphore, respectively. Their main functions are as follows:
@@ -58,14 +58,14 @@ The P operation and V operation you described correspond to the "wait" (P) and "
 PV operation (P operation and V operation) is used to control the process's entry and exit from the critical section:
 
 - **Before entering the critical section**:
-- When the process wants to enter the critical section, it first executes the **P(S)** operation, that is, "applying for" semaphore S.
-- If the value of semaphore S is greater than 0 (S > 0), it means that there is no process in the critical section, the process can enter, and the semaphore S is reduced by 1.
-- If the value of semaphore S is 0 or negative (S <= 0), the process will be blocked and put in the waiting queue, waiting for the release of the semaphore.
+      - When the process wants to enter the critical section, it first executes the **P(S)** operation, that is, "applying for" semaphore S.
+      - If the value of semaphore S is greater than 0 (S > 0), it means that there is no process in the critical section, the process can enter, and the semaphore S is reduced by 1.
+      - If the value of semaphore S is 0 or negative (S <= 0), the process will be blocked and put in the waiting queue, waiting for the release of the semaphore.
 
 - **After exiting the critical section**:
-- When the process completes the critical section operation, it executes the **V(S)** operation, that is, "releasing" semaphore S.
-- The semaphore S is increased by 1, indicating that the critical section resources are released, which may wake up a process in the waiting queue and allow it to enter the critical section.
-- If the value of semaphore S is still non-negative, other processes may continue to enter the critical section.
+      - When the process completes the critical section operation, it executes the **V(S)** operation, that is, "releasing" semaphore S.
+      - The semaphore S is increased by 1, indicating that the critical section resources are released, which may wake up a process in the waiting queue and allow it to enter the critical section.
+      - If the value of semaphore S is still non-negative, other processes may continue to enter the critical section.
 
 ### 4. **Mutual Exclusion**
 - The function of semaphore S is to ensure that only one process can enter the critical section at any time. When a process executes P(S), if the value of semaphore S is 1, the semaphore will be reduced to 0, indicating that it has entered the critical section and other processes must wait.
