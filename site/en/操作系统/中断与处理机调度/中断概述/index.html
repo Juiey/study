@@ -2788,12 +2788,14 @@
 <h3 id="interrupt-priority">Interrupt priority</h3>
 <ul>
 <li><strong>Interrupt priority</strong> is to enable the system to respond to and handle all interrupt events in a timely manner. The system will classify interrupt sources into different levels according to the importance and urgency of the event.</li>
-<li>In general, the order of interrupt priority from high to low is:</li>
+<li>In general, the order of interrupt priority from high to low is:<ul>
 <li>Hardware fault interrupt</li>
 <li>Voluntary interrupt</li>
 <li>Program interrupt</li>
 <li>External interrupt</li>
 <li>Input and output interrupt</li>
+</ul>
+</li>
 </ul>
 <h3 id="interrupt-masking">Interrupt masking</h3>
 <ul>
@@ -2803,28 +2805,42 @@
 </ul>
 <h2 id="interrupt-processing-method">Interrupt processing method</h2>
 <ol>
-<li><strong>Sequential processing method</strong>:</li>
 <li>
-<p>In this method, when the processor is processing an interrupt, all new interrupt requests are masked until the current interrupt is processed and then check whether there is a new interrupt. If there is a new interrupt, continue to process it in sequence.</p>
+<p><strong>Sequential processing method</strong>:</p>
+<ul>
+<li>In this method, when the processor is processing an interrupt, all new interrupt requests are masked until the current interrupt is processed and then check whether there is a new interrupt. If there is a new interrupt, continue to process it in sequence.</li>
+</ul>
 </li>
 <li>
 <p><strong>Nested processing method</strong>:</p>
-</li>
+<ul>
 <li>When the system sets the interrupt priority, multiple interrupt requests of different priorities may arrive at the same time. The system will respond to the highest priority interrupt request first.</li>
 <li>High-priority interrupt requests can preempt low-priority interrupt processing, similar to <strong>preemptive scheduling</strong> in process scheduling.</li>
+</ul>
+</li>
 </ol>
 <h2 id="interrupt-processing-process">Interrupt processing process</h2>
 <ol>
-<li><strong>Wake up the blocked driver process</strong>:</li>
+<li><strong>Wake up the blocked driver process</strong>:<ul>
 <li>When an interrupt occurs, the system may need to wake up some blocked processes to process resources or complete specific tasks.</li>
-<li><strong>Protect the CPU environment of the interrupted process</strong>:</li>
+</ul>
+</li>
+<li><strong>Protect the CPU environment of the interrupted process</strong>:<ul>
 <li>Save the state of the current process (such as register values) to ensure that the process can be restored after the interrupt processing is completed.</li>
-<li><strong>Transfer to the corresponding device handler</strong>:</li>
+</ul>
+</li>
+<li><strong>Transfer to the corresponding device handler</strong>:<ul>
 <li>Jump to the corresponding device handler according to the interrupt source.</li>
-<li><strong>Interrupt processing</strong>:</li>
+</ul>
+</li>
+<li><strong>Interrupt processing</strong>:<ul>
 <li>Execute the interrupt handler to handle related interrupt events.</li>
-<li><strong>Restore the scene of the interrupted process</strong>:</li>
+</ul>
+</li>
+<li><strong>Restore the scene of the interrupted process</strong>:<ul>
 <li>After the interrupt processing is completed, restore the state of the original process and continue to execute the interrupted task.</li>
+</ul>
+</li>
 </ol>
 
 

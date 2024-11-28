@@ -2786,22 +2786,26 @@
 <ol>
 <li>
 <p><strong>Non-preemptive method</strong>:</p>
-</li>
-<li>
-<p>In this method, once a process obtains CPU control, it can run until it is completed or blocked, and then hand over the processor to other processes.</p>
-</li>
+<ul>
+<li>In this method, once a process obtains CPU control, it can run until it is completed or blocked, and then hand over the processor to other processes.<ul>
 <li><strong>Advantages</strong>: Simple implementation, low system overhead, suitable for batch processing systems.</li>
-<li>
-<p><strong>Disadvantages</strong>: Unable to cope with real-time task requirements and cannot meet strict response time requirements.</p>
+<li><strong>Disadvantages</strong>: Unable to cope with real-time task requirements and cannot meet strict response time requirements.</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Preemptive method</strong>:</p>
-</li>
+<ul>
 <li>The scheduler can interrupt the running process according to specific principles (such as priority, short process priority, time slice rotation) and allocate the CPU to other more needed processes.</li>
-<li><strong>Preemptive principle</strong>:</li>
+</ul>
+</li>
+<li><strong>Preemptive principle</strong>:<ul>
 <li><strong>Priority principle</strong>: A high-priority process can interrupt a low-priority process.</li>
 <li><strong>Short process priority principle</strong>: A short process can preempt the execution of a long process.</li>
 <li><strong>Time slice principle</strong>: Each process takes turns to occupy the CPU according to the time slice, and switches to the next process when the time slice is up, which is suitable for time-sharing systems.</li>
+</ul>
+</li>
 </ol>
 <p>Different scheduling methods are suitable for different scenarios. In real-time systems, preemptive methods are usually used to ensure that key tasks are completed on time; in batch systems, non-preemptive methods are tended to be used to reduce system overhead.</p>
 

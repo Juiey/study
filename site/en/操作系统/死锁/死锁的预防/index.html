@@ -2720,24 +2720,34 @@
 </li>
 <li>
 <p><strong>Advantages</strong>:</p>
-</li>
+<ul>
 <li>Simple and easy to implement.</li>
 <li>Relatively intuitive in system design.</li>
-<li><strong>Disadvantages</strong>:</li>
+</ul>
+</li>
+<li><strong>Disadvantages</strong>:<ul>
 <li><strong>Low resource utilization</strong>: Due to pre-allocation, some resources may be idle and cannot be used by other processes.</li>
 <li><strong>Starvation phenomenon</strong>: If a process does not obtain all resources in time, it may wait for a long time, resulting in starvation.</li>
+</ul>
+</li>
 </ul>
 <p>This method is suitable for systems with relatively accurate predictions of resource requirements, but it is not always effective in multi-tasking, large-scale complex systems.</p>
 <h2 id="destroy-the-non-preemptible-condition">Destroy the "non-preemptible" condition</h2>
 <ul>
 <li><strong>Method</strong>: Adopt a preemptible resource allocation method, that is, allow the process to release the resources it has held when resources are insufficient. If the process cannot obtain the required resources, it will release the occupied resources and reapply for them later.</li>
-<li><strong>Advantages</strong>:</li>
+<li><strong>Advantages</strong>:<ul>
 <li>It can prevent deadlock from occurring, because the process can readjust the system state by releasing the occupied resources.</li>
-<li><strong>Disadvantages</strong>:</li>
+</ul>
+</li>
+<li><strong>Disadvantages</strong>:<ul>
 <li><strong>Complex implementation</strong>: It is necessary to implement a mechanism for resource preemption, saving and restoring the state in the operating system.</li>
 <li><strong>High cost</strong>: In some resources (such as memory, files), saving and restoring the state may involve a large overhead.</li>
-<li><strong>Scope of application</strong>:</li>
+</ul>
+</li>
+<li><strong>Scope of application</strong>:<ul>
 <li>It is more applicable to resources (such as CPU registers, memory) that can easily save and restore the state.</li>
+</ul>
+</li>
 </ul>
 <p>This method is suitable for environments where the resource state can be efficiently saved and restored, but it may be very complicated to implement in some hardware or software environments.</p>
 <h2 id="destroy-the-circular-wait-condition">Destroy the "circular wait" condition</h2>
@@ -2745,12 +2755,16 @@
 <li><strong>Method</strong>: By linearly sorting all resources in the system, ensure that resource requests follow a certain order, thereby avoiding circular waiting. It can be achieved in two ways:</li>
 <li><strong>Sequential allocation</strong>: All processes are required to apply for resources in the order of resource numbers.</li>
 <li><strong>Discard the larger one first, then take the smaller one</strong>: When a process applies for resources, if the number of the existing resource is greater than the number of the resource being applied for, the occupied resource must be released.</li>
-<li><strong>Advantages</strong>:</li>
+<li><strong>Advantages</strong>:<ul>
 <li>Through reasonable resource sorting, the risk of deadlock is reduced, and the system throughput and resource utilization are improved.</li>
-<li><strong>Disadvantages</strong>:</li>
+</ul>
+</li>
+<li><strong>Disadvantages</strong>:<ul>
 <li><strong>Numbering order cannot meet all requirements</strong>: For some complex resource dependencies, it may be difficult to find a resource numbering order that all processes are satisfied with.</li>
 <li><strong>Resource waste</strong>: Even if some resources may not be used in a certain period of time, they are still subject to sorting restrictions.</li>
 <li><strong>User programming restrictions</strong>: Requires that processes must apply for resources strictly in the specified order, which may limit the flexibility of user programs.</li>
+</ul>
+</li>
 </ul>
 <p>This method is suitable for scenarios where resource requests are relatively predictable and fixed, but in dynamically changing systems, it may cause unnecessary resource waste and inconvenience.</p>
 

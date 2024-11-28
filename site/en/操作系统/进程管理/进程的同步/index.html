@@ -2731,9 +2731,11 @@
 <p>The mutual exclusion problem mainly solves the access control problem of multiple concurrent processes to the critical section. In a concurrent system, multiple processes may access shared resources at the same time. If there is no appropriate control mechanism, it may cause race conditions, data inconsistency or resource conflicts.</p>
 <ul>
 <li><strong>Semaphore solves mutual exclusion problem</strong>:
-Semaphore can be used to solve mutual exclusion problem. The process access to shared resources is controlled by P (wait) and V (release) operations on the semaphore:</li>
+Semaphore can be used to solve mutual exclusion problem. The process access to shared resources is controlled by P (wait) and V (release) operations on the semaphore:<ul>
 <li><strong>P operation</strong>: Request to enter the critical section. If the semaphore is 0, the process will be blocked until the semaphore is greater than 0.</li>
 <li><strong>V operation</strong>: Exit the critical section, release the semaphore, and notify other processes that they can enter the critical section.</li>
+</ul>
+</li>
 </ul>
 <p><strong>Implementation of mutual exclusion</strong>: By setting a semaphore (such as <code>semaphore mutex = 1</code>), it is ensured that only one process can enter the critical section at any time. Other processes can only wait until the semaphore is restored, indicating that they can enter the critical section. This solves the problem of concurrent processes accessing the critical section mutually exclusive.</p>
 <h3 id="process-synchronization-problem"><strong>Process synchronization problem</strong></h3>
@@ -2745,9 +2747,11 @@ In an asynchronous environment, each process is independent and advances at its 
 </li>
 <li>
 <p><strong>Definition of process synchronization</strong>:</p>
-</li>
+<ul>
 <li><strong>Process synchronization</strong>: A group of concurrent processes that cooperate with each other, each of which advances at its own independent speed, but they need to work closely together to complete a common task.</li>
 <li>Between these processes, it is necessary to ensure that they "know" each other's existence and coordinate their work to ensure the correct execution order.</li>
+</ul>
+</li>
 </ul>
 <p><strong>Solution</strong>: Use two semaphores to control synchronization:</p>
 <ul>

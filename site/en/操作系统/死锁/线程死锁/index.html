@@ -2696,28 +2696,32 @@
 
 <p>In an operating system that supports multithreading, thread deadlock refers to a deadlock state caused by multiple threads waiting for resources. Thread deadlock can be divided into two types:</p>
 <ol>
-<li><strong>Thread deadlock in the same process</strong></li>
+<li><strong>Thread deadlock in the same process</strong><ul>
 <li>In the same process, different threads may deadlock because they share the resources of the same process (such as variables, memory, etc.). In order to synchronize access to these resources, threads usually use <strong>mutex</strong> to perform mutual exclusion operations.</li>
-<li><strong>Deadlock scenario</strong>:</li>
+</ul>
+</li>
+<li>
+<p><strong>Deadlock scenario</strong>:</p>
+<ul>
 <li>There are two mutexes: <code>L1</code> and <code>L2</code>.</li>
 <li>Thread <code>T1</code> obtains <code>L1</code> and requests <code>L2</code>;</li>
 <li>Thread <code>T2</code> obtains <code>L2</code> and requests <code>L1</code>.</li>
-<li>
-<p>Because the two threads wait for each other to release the lock, deadlock occurs and the two threads cannot continue to execute.</p>
+<li>Because the two threads wait for each other to release the lock, deadlock occurs and the two threads cannot continue to execute.</li>
+</ul>
 </li>
 <li>
 <p><strong>Deadlock cause</strong>: A thread requests another lock while holding one lock, and the lock is held by another thread. This circular waiting situation causes deadlock.</p>
 </li>
 <li>
 <p><strong>Thread deadlock in different processes</strong></p>
-</li>
+<ul>
 <li>Thread deadlock in different processes means that threads in two or more processes wait for each other and cannot continue to execute. Assume there are two processes <code>P1</code> and <code>P2</code>, each with multiple threads:</li>
 <li>Threads <code>P11</code>, <code>P12</code>, ... in process <code>P1</code>, threads <code>P21</code>, <code>P22</code>, ... in process <code>P2</code>;</li>
 <li>Thread <code>P11</code> of process <code>P1</code> obtains resource <code>R1</code>, thread <code>P21</code> of process <code>P2</code> obtains resource <code>R2</code>;</li>
 <li>If <code>P11</code> requests <code>R2</code> but cannot obtain it, it enters a blocked state, waiting for <code>P21</code> to release <code>R2</code>;</li>
 <li>At the same time, <code>P21</code> requests <code>R1</code> but cannot obtain it, enters a blocked state, waiting for <code>P11</code> to release <code>R1</code>;</li>
-<li>
-<p>At this time, <code>P11</code> and <code>P21</code> wait for each other to release resources, resulting in deadlock.</p>
+<li>At this time, <code>P11</code> and <code>P21</code> wait for each other to release resources, resulting in deadlock.</li>
+</ul>
 </li>
 <li>
 <p><strong>Deadlock cause</strong>: Threads between processes hold resources needed by each other, and form a circular wait while waiting.</p>
@@ -2726,18 +2730,22 @@
 <h2 id="solution">Solution</h2>
 <p>The solution to thread deadlock is similar to that to process deadlock, and can be handled in the following ways:</p>
 <ol>
-<li><strong>Deadlock prevention</strong>: Prevent deadlock by limiting the order of resource application or designing resource allocation rules.</li>
 <li>
-<p>For example: Use <strong>resource sorting</strong> strategy to require threads to apply for resources in a fixed order to avoid circular waiting.</p>
+<p><strong>Deadlock prevention</strong>: Prevent deadlock by limiting the order of resource application or designing resource allocation rules.</p>
+<ul>
+<li>For example: Use <strong>resource sorting</strong> strategy to require threads to apply for resources in a fixed order to avoid circular waiting.</li>
+</ul>
 </li>
 <li>
 <p><strong>Deadlock avoidance</strong>: Avoid deadlock by dynamically checking the resource requests of threads to ensure that the system is in a <strong>safe state</strong> after resource allocation. For example, use <strong>banker's algorithm</strong> to avoid deadlock.</p>
 </li>
 <li>
 <p><strong>Deadlock detection and release</strong>: Allow the system to deadlock, but run the deadlock detection program regularly to identify deadlocks and take measures to resolve them. For example:</p>
-</li>
+<ul>
 <li><strong>Terminate process</strong>: End a deadlocked process and release resources.</li>
 <li><strong>Roll back process</strong>: Roll back a process to a previous safe state and release resources.</li>
+</ul>
+</li>
 </ol>
 <h2 id="summary">Summary</h2>
 <ul>

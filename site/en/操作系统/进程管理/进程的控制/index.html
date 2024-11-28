@@ -2803,57 +2803,65 @@
 <ol>
 <li>
 <p><strong>Process creation</strong>:</p>
-</li>
+<ul>
 <li>
 <p>Create a new process, allocate necessary resources to it, and initialize PCB.</p>
 </li>
 <li>
 <p>After creation, the process enters the <strong>ready state</strong>, waiting for the scheduler to allocate CPU time.</p>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Process cancellation</strong>:</p>
-</li>
+<ul>
 <li>
 <p>Cancel (terminate) the process, reclaim the resources occupied by the process, and remove its PCB from the system.</p>
 </li>
 <li>
 <p>Termination reasons may include normal program termination, user active termination, abnormal errors, etc.</p>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Process blocking</strong>:</p>
-</li>
+<ul>
 <li>
 <p>During the running process, if the process needs to wait for an event (such as I/O completion, signal arrival), it enters the <strong>blocking state</strong>.</p>
 </li>
 <li>
 <p>After the process is blocked, the CPU will be released to allow other processes to execute.</p>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Process wakeup</strong>:</p>
-</li>
-<li>
-<p>When the event that the blocked process is waiting for occurs, the process is awakened and enters the <strong>ready state</strong>.</p>
-</li>
-<li>
-<p>The wake-up operation is usually triggered by the operating system or other processes.</p>
+<ul>
+<li>When the event that the blocked process is waiting for occurs, the process is awakened and enters the <strong>ready state</strong>.</li>
+<li>The wake-up operation is usually triggered by the operating system or other processes.</li>
+</ul>
 </li>
 <li>
 <p><strong>Change process priority number</strong>:</p>
-</li>
+<ul>
 <li>
 <p>Adjust the priority of the process to change the priority of the process when scheduling.</p>
 </li>
 <li>
 <p>A process with a higher priority will be scheduled for execution earlier than a process with a lower priority.</p>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Process scheduling</strong>:</p>
-</li>
+<ul>
 <li>
 <p>Select a process from the ready queue, switch it to the <strong>running state</strong>, and start execution.</p>
 </li>
 <li>
 <p>The scheduler selects the appropriate process based on the scheduling algorithm (such as first-come-first-served, priority scheduling, time slice rotation, etc.).</p>
+</li>
+</ul>
 </li>
 </ol>
 <h3 id="four-process-control-primitives">Four process control primitives</h3>

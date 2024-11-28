@@ -2719,28 +2719,32 @@
 
 <p>在支援多執行緒的作業系統中，執行緒死鎖是指多個執行緒因相互等待資源而導致的死鎖狀態。執行緒死鎖可以分為兩種類型：</p>
 <ol>
-<li><strong>同一行程的執行緒死鎖</strong></li>
+<li><strong>同一行程的執行緒死鎖</strong><ul>
 <li>在同一個行程中，不同執行緒可能會因為共享相同行程的資源（如變數、記憶體等）而發生死鎖。為了同步存取這些資源，執行緒通常使用<strong>互斥鎖（mutex）</strong>來進行互斥操作。</li>
-<li><strong>死鎖發生場景</strong>：</li>
+</ul>
+</li>
+<li>
+<p><strong>死鎖發生場景</strong>：</p>
+<ul>
 <li>設有兩個互斥鎖：<code>L1</code> 和 <code>L2</code>。</li>
 <li>線程 <code>T1</code> 獲得了 <code>L1</code>，並請求 <code>L2</code>；</li>
 <li>線程 <code>T2</code> 獲得了 <code>L2</code>，並請求 <code>L1</code>。</li>
-<li>
-<p>由於兩個執行緒互相等待對方釋放鎖，造成死鎖，兩個執行緒無法繼續執行。</p>
+<li>由於兩個執行緒互相等待對方釋放鎖，造成死鎖，兩個執行緒無法繼續執行。</li>
+</ul>
 </li>
 <li>
 <p><strong>死鎖原因</strong>：執行緒在持有一個鎖的同時請求另一個鎖，而該鎖被另一個執行緒持有。這種循環等待的情況導致死鎖。</p>
 </li>
 <li>
 <p><strong>不同行程的執行緒死鎖</strong></p>
-</li>
+<ul>
 <li>不同行程的執行緒死鎖是指兩個或更多行程中的執行緒發生相互等待，無法繼續執行。假設有兩個行程 <code>P1</code> 和 <code>P2</code>，每個行程內有多個執行緒：</li>
 <li>進程 <code>P1</code> 中的執行緒 <code>P11</code>、<code>P12</code>、...，進程 <code>P2</code> 中的執行緒 <code>P21</code>、<code>P22</code>、...；</li>
 <li>行程 <code>P1</code> 的執行緒 <code>P11</code> 獲得了資源 <code>R1</code>，行程 <code>P2</code> 的執行緒 <code>P21</code> 獲得了資源 <code>R2</code>；</li>
 <li>如果 <code>P11</code> 請求 <code>R2</code> 但無法取得，進入阻塞狀態，等待 <code>P21</code> 釋放 <code>R2</code>；</li>
 <li>同時，<code>P21</code> 請求 <code>R1</code> 但無法取得，進入阻塞狀態，等待 <code>P11</code> 釋放 <code>R1</code>；</li>
-<li>
-<p>這時，<code>P11</code> 和 <code>P21</code> 互相等待對方釋放資源，導致死鎖。</p>
+<li>這時，<code>P11</code> 和 <code>P21</code> 互相等待對方釋放資源，導致死鎖。</li>
+</ul>
 </li>
 <li>
 <p><strong>死鎖原因</strong>：進程間的執行緒互相持有對方所需的資源，並且在等待中形成循環等待。</p>
@@ -2749,18 +2753,22 @@
 <h2 id="_1">解決方案</h2>
 <p>執行緒死鎖的解決方法基本上與進程死鎖的解決方法類似，可以透過以下方式處理：</p>
 <ol>
-<li><strong>死鎖預防</strong>：透過限制資源的申請順序或設計資源分配規則，防止死鎖的發生。</li>
 <li>
-<p>如：使用<strong>資源排序</strong>策略，要求執行緒以固定順序申請資源，避免形成循環等待。</p>
+<p><strong>死鎖預防</strong>：透過限制資源的申請順序或設計資源分配規則，防止死鎖的發生。</p>
+<ul>
+<li>如：使用<strong>資源排序</strong>策略，要求執行緒以固定順序申請資源，避免形成循環等待。</li>
+</ul>
 </li>
 <li>
 <p><strong>死鎖避免</strong>：透過動態檢查執行緒的資源請求，確保在資源分配後系統處於<strong>安全狀態</strong>，從而避免死鎖。例如使用<strong>銀行家演算法</strong>來避免死鎖。</p>
 </li>
 <li>
 <p><strong>死鎖偵測與解除</strong>：允許系統發生死鎖，但定期執行死鎖偵測程序，識別死鎖並採取措施解決。例如：</p>
-</li>
+<ul>
 <li><strong>終止進程</strong>：結束某個死鎖進程，釋放資源。</li>
 <li><strong>回滾進程</strong>：回退某個行程到之前的安全狀態，釋放資源。</li>
+</ul>
+</li>
 </ol>
 <h2 id="_2">總結</h2>
 <ul>
